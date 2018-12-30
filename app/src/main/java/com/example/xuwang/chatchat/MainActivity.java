@@ -1,5 +1,6 @@
 package com.example.xuwang.chatchat;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -143,6 +144,9 @@ public class MainActivity extends AppCompatActivity {
             ChatMessage data = listArray.get(position);
             ((MyViewHolder)viewHolder).messageContent.setText(data.getMessageText());
             ((MyViewHolder)viewHolder).messageUser.setText(data.getMessageUser());
+            ChatMessage ac = new ChatMessage("ssss", "dsad");
+            String a = ac.getMessageTime();
+
             ((MyViewHolder)viewHolder).messageTime.setText(data.getMessageTime());
         }
 
