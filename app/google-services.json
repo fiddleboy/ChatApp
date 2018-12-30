@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "687928309737",
+    "firebase_url": "https://side-project-b9273.firebaseio.com",
+    "project_id": "side-project-b9273",
+    "storage_bucket": "side-project-b9273.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687928309737:android:580d94a65cb107ce",
+        "android_client_info": {
+          "package_name": "com.example.xuwang.chatchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687928309737-m33oavnbbljk4gpjnsclnkmqpv6mqkl9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.xuwang.chatchat",
+            "certificate_hash": "5b6a4f1c53fa62d50d493c95c2d8a00825e8c2a3"
+          }
+        },
+        {
+          "client_id": "687928309737-eeeiarqbg7so5bhep513tmgevc38e85q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU7C-DrQQqrfc_HWPRyDtkljdO2bsgddY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687928309737-h88jf2u93grgf22jq2sadgest4c94pbj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
