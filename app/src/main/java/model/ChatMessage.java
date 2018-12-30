@@ -1,19 +1,23 @@
 package model;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class ChatMessage {
 
     private String messageText;
     private String messageUser;
-    private long messageTime;
+//    private long messageTime;
+    private String dateText;
 
     public ChatMessage(String messageText, String messageUser) {
         this.messageText = messageText;
         this.messageUser = messageUser;
 
         // Initialize to current time
-        messageTime = new Date().getTime();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        this.dateText = dtf.format(now);
     }
 
     public ChatMessage(){
@@ -36,11 +40,11 @@ public class ChatMessage {
         this.messageUser = messageUser;
     }
 
-    public long getMessageTime() {
-        return messageTime;
+    public String getMessageTime() {
+        return this.dateText;
     }
 
-    public void setMessageTime(long messageTime) {
-        this.messageTime = messageTime;
-    }
+//    public void setMessageTime(long messageTime) {
+//        this.dateText = messageTime;
+//    }
 }

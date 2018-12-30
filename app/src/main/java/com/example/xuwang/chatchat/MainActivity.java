@@ -21,9 +21,7 @@ import android.widget.Toast;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,7 +30,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import model.ChatMessage;
 
@@ -144,15 +141,22 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
             ChatMessage data = listArray.get(position);
-            ((MyViewHolder)viewHolder).MyText.setText(data.getMessageText());
+            ((MyViewHolder)viewHolder).messageContent.setText(data.getMessageText());
+            ((MyViewHolder)viewHolder).messageUser.setText(data.getMessageUser());
+            ((MyViewHolder)viewHolder).messageTime.setText(data.getMessageTime());
         }
 
         public class MyViewHolder extends RecyclerView.ViewHolder {
-            TextView MyText;
+            TextView messageContent;
+            TextView messageUser;
+            TextView messageTime;
+
 
             public MyViewHolder(View itemView) {
                 super(itemView);
-                MyText = itemView.findViewById(R.id.textView);
+                messageContent = itemView.findViewById(R.id.message_content);
+                messageUser = itemView.findViewById(R.id.message_user);
+                messageTime = itemView.findViewById(R.id.message_time);
             }
         }
 
